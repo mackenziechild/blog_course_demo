@@ -13,5 +13,8 @@
 		</div>
 	</div>
 
+	<%= link_to "Edit", edit_project_path(@project) %>
+	<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
+
 	<hr>
 </div>
