@@ -1,1 +1,18 @@
-<h1>Hello World!</h1>
+<h1 id="page_title">Stuff I've Written</h1>
+
+<div id="posts_wrapper" class="skinny_wrapper">
+	<% @posts.each do |post| %>
+		<div class="post">
+			<p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
+			<h2><a href="#"><%= link_to post.title, post %></a></h2>
+			<hr>
+		</div>
+	<% end %>
+</div>
+
+<div class="pagination">
+	<span class="previous_page disabled">Previous</span>
+	<em class="current">1</em>
+	<a rel="next" href="#">2</a>
+	<a class="next_page" href="#">Next</a>
+</div>
